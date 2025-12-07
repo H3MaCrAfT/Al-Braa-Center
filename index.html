@@ -4,22 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>مركز البراء - الإصابات والتأهيل</title>
-
-  <!-- 
-    ملف واحد: HTML + CSS + JS
-    حفظ الملف باسم index.html وارفعه مباشرة
-  -->
-
   <style>
     :root{
-      --main:#1e7f6b;     /* لون أساسي (أخضر) */
-      --accent:#0f5660;   /* لون ثانوي */
+      --main:#1e7f6b;
+      --accent:#0f5660;
       --muted:#6b6b6b;
       --bg:#fafafa;
       --card:#ffffff;
       --shadow: 0 6px 18px rgba(15,85,96,0.08);
     }
-
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -27,12 +20,8 @@
       font-family: "Tajawal", "Cairo", Arial, sans-serif;
       background:var(--bg);
       color:#111;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
       line-height:1.6;
     }
-
-    /* ====== NAV / HEADER ====== */
     header{
       position:sticky;
       top:0;
@@ -87,8 +76,6 @@
       color:var(--main);
       background:rgba(30,127,107,0.06);
     }
-
-    /* ====== HERO ====== */
     .hero{
       max-width:1100px;
       margin:22px auto 10px;
@@ -130,7 +117,6 @@
     }
     .btn-primary{background:var(--main); color:#fff; box-shadow: 0 6px 18px rgba(30,127,107,0.18)}
     .btn-outline{background:transparent; color:var(--accent); border:1px solid rgba(15,86,96,0.08)}
-
     .hero-right{
       width:300px;
       min-width:240px;
@@ -142,8 +128,6 @@
     }
     .hero-right img{width:140px; height:140px; object-fit:cover; border-radius:10px; display:block; margin:0 auto 12px}
     .small{font-size:13px; color:var(--muted)}
-
-    /* ====== MAIN LAYOUT ====== */
     main{
       max-width:1100px;
       margin:12px auto 60px;
@@ -152,8 +136,6 @@
       gap:24px;
       align-items:flex-start;
     }
-
-    /* Sidebar (يمين) */
     .sidebar{
       width:260px;
       min-width:220px;
@@ -174,7 +156,6 @@
     .sidebar h4{margin:4px 0 12px}
     .side-btn{display:block;text-decoration:none;color:var(--accent);padding:8px;border-radius:8px;margin:6px 0;font-weight:700}
     .side-btn:hover{background:rgba(30,127,107,0.05)}
-
     .divider-vertical{
       width:1px;
       background:#eee;
@@ -183,8 +164,6 @@
       vertical-align:middle;
       margin:0 8px;
     }
-
-    /* Content (شمال) */
     .content{flex:1}
     section{margin-bottom:18px}
     .card{
@@ -194,8 +173,6 @@
       box-shadow:var(--shadow);
       margin-bottom:12px;
     }
-
-    /* الخدمات */
     .services-grid{
       display:grid;
       grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
@@ -208,28 +185,13 @@
       border:1px solid rgba(30,127,107,0.04);
     }
     .service h4{margin:6px 0 8px}
-
-    /* استعراض النتائج */
     .testimonials{display:flex;flex-direction:column;gap:10px}
     .testi{padding:12px;border-radius:8px;background:#fff;border-left:4px solid var(--main)}
-
-    /* نموذج التواصل */
-    form input, form textarea{
-      width:100%;
-      padding:10px;
-      border-radius:8px;
-      border:1px solid #e0e0e0;
-      margin-bottom:10px;
-      font-size:14px;
-    }
-
     .muted{color:var(--muted)}
-
-    /* واتساب طائر وزر العودة */
     .floating-whatsapp{
       position:fixed;
       bottom:22px;
-      left:22px; /* لأن dir rtl خليته يسار ليتناسب مع الموبايل */
+      left:22px;
       z-index:90;
     }
     .floating-whatsapp a{
@@ -240,7 +202,6 @@
       background:#25D366;color:#fff;font-size:22px;text-decoration:none;
       box-shadow:0 8px 24px rgba(37,211,102,0.18);
     }
-
     .to-top{
       position:fixed;
       bottom:22px;
@@ -250,7 +211,6 @@
       background:var(--accent); color:#fff; display:flex;align-items:center;justify-content:center;
       text-decoration:none; font-weight:700; box-shadow:0 8px 20px rgba(15,86,96,0.18)
     }
-
     footer{
       margin-top:18px;
       padding:16px;
@@ -258,8 +218,6 @@
       color:var(--muted);
       font-size:13px;
     }
-
-    /* responsive */
     @media (max-width:900px){
       main{flex-direction:column;padding:0 12px}
       .sidebar{position:static;width:100%;order:2;top:auto;}
@@ -270,43 +228,36 @@
   </style>
 </head>
 <body>
-
-  <!-- ===== HEADER / NAV ===== -->
   <header>
-    <div class="nav-wrap" role="navigation" aria-label="القائمة الرئيسية">
-      <div class="brand" aria-hidden="true">
+    <div class="nav-wrap">
+      <div class="brand">
         <div class="logo">بـ</div>
         <div>
           <h1>مركز البراء</h1>
           <div class="small muted">للإصابات والتأهيل</div>
         </div>
       </div>
-
       <nav>
         <a href="#home" class="nav-link active">الرئيسية</a>
         <a href="#about" class="nav-link">من نحن</a>
         <a href="#services" class="nav-link">خدماتنا</a>
         <a href="#results" class="nav-link">نتائجنا</a>
+        <a href="#developers" class="nav-link">فريق البرمجة</a>
         <a href="#contact" class="nav-link">تواصل</a>
       </nav>
     </div>
   </header>
-
-  <!-- ===== HERO ===== -->
-  <section id="home" class="hero" aria-label="مقدمة">
+  <section id="home" class="hero">
     <div class="hero-left">
       <h2>نرعاك للتعافي بخبرة واحتراف</h2>
       <h3>مركز البراء للإصابات والتأهيل</h3>
       <p>نقدم علاج الإصابات، التأهيل بعد العمليات، برامج التخسيس، وجلسات الحجامة تحت إشراف فريق متخصص. هدفنا عودتك لحياتك الطبيعية سريعًا وبأمان.</p>
-
       <div class="cta-row">
         <a class="btn btn-primary" href="#contact" id="bookBtn">احجز جلسة الآن</a>
         <a class="btn btn-outline" href="#services">اطلع على خدماتنا</a>
       </div>
     </div>
-
-    <aside class="hero-right" aria-label="معلومات سريعة">
-      <!-- لو عندك صورة للمركز حط رابط الصورة بدل src -->
+    <aside class="hero-right">
       <img src="logo.png" alt="شعار مركز البراء" onerror="this.style.display='none'">
       <div style="clear:both"></div>
       <div class="small muted">إدارة المركز</div>
@@ -315,33 +266,26 @@
     </aside>
   </section>
 
-  <!-- ====== MAIN ====== -->
   <main>
-
-    <!-- ====== Sidebar (يمين) ====== -->
-    <aside class="sidebar" aria-label="قائمة سريعة">
+    <aside class="sidebar">
       <div style="overflow:hidden">
-        <div class="avatar" aria-hidden="true">آي</div>
+        <div class="avatar">آي</div>
         <div style="display:inline-block; vertical-align:top; text-align:right">
           <h4 style="margin:0">مركز البراء</h4>
           <div class="small muted">رعاية وتأهيل</div>
         </div>
       </div>
-
       <hr style="margin:12px 0;border:none;border-top:1px solid #f0f0f0">
-
       <a class="side-btn" href="#contact">📞 تواصل الآن</a>
       <a class="side-btn" href="#services">🩺 خدماتنا</a>
       <a class="side-btn" href="#results">⭐ نتائج العملاء</a>
-
+      <a class="side-btn" href="#developers">👨‍💻 فريق البرمجة</a>
       <div style="height:12px"></div>
-
       <div style="display:flex;align-items:center;gap:8px">
         <span class="muted">العنوان</span>
-        <div class="divider-vertical"></div>
-        <div class="small">مدينة نصر، شارع الصحة، القاهرة</div>
+        <div class="small">اولاد صقر، شارع المستشفى، الشرقية</div>
+        <div class="small"></div>
       </div>
-
       <div style="height:10px"></div>
       <div style="display:flex;align-items:center;gap:8px">
         <span class="muted">مواعيد</span>
@@ -350,52 +294,44 @@
       </div>
     </aside>
 
-    <!-- ====== Content (شمال) ====== -->
-    <section class="content" aria-label="محتوى الصفحة">
-
-      <!-- عنّا -->
-      <section id="about" class="card" aria-labelledby="aboutTitle">
-        <h3 id="aboutTitle">من نحن</h3>
-        <p>
-          مركز البراء هو وجهتك المثالية للتعافي من الإصابات والتأهيل الحركي والبدني. نقدم خدمات علاج طبيعي، وتأهيل عضلي، وتخسيس، وحجامة، تحت إشراف نخبة من المتخصصين وبأحدث التقنيات.
-        </p>
+    <section class="content">
+      <section id="about" class="card">
+        <h3>من نحن</h3>
+        <p>مركز البراء هو وجهتك المثالية للتعافي من الإصابات والتأهيل الحركي والبدني. نقدم خدمات علاج طبيعي، وتأهيل عضلي، وتخسيس، وحجامة، تحت إشراف نخبة من المتخصصين وبأحدث التقنيات.</p>
       </section>
 
-      <!-- خدمات -->
-      <section id="services" class="card" aria-labelledby="servicesTitle">
-        <h3 id="servicesTitle">خدماتنا</h3>
-
+      <section id="services" class="card">
+        <h3>خدماتنا</h3>
         <div class="services-grid">
           <div class="service">
             <h4>علاج إصابات الملاعب</h4>
             <p class="muted">علاج فعّال وسريع لاستعادة الأداء الرياضي.</p>
           </div>
-
           <div class="service">
             <h4>التأهيل بعد العمليات</h4>
             <p class="muted">برامج متدرجة لاستعادة الحركة والكفاءة.</p>
           </div>
-
           <div class="service">
             <h4>جلسات علاج طبيعي</h4>
             <p class="muted">تخفيف الألم وتحسين مرونة الجسم.</p>
           </div>
-
           <div class="service">
             <h4>برامج التخسيس</h4>
             <p class="muted">خطط متوازنة ومتابعة شخصية للوصول للوزن المثالي.</p>
           </div>
-
           <div class="service">
             <h4>الحجامة الطبية</h4>
             <p class="muted">جلسات معقمة وتحت إشراف مختصين.</p>
           </div>
         </div>
+        <div class="service">
+            <h4>الجلسات اونلاين</h4>
+            <p class="muted">كما يمكن اجراء الجلسات اونلاين بمعرفة الدكتورة.</p>
+          </div>
       </section>
 
-      <!-- نتائج -->
-      <section id="results" class="card" aria-labelledby="resultsTitle">
-        <h3 id="resultsTitle">نتائجنا</h3>
+      <section id="results" class="card">
+        <h3>نتائجنا</h3>
         <div class="testimonials">
           <div class="testi">
             <strong>محمد أ.</strong> - "تعافيت بعد الإصابة في 6 أسابيع بفضل برنامج التأهيل."
@@ -406,44 +342,38 @@
         </div>
       </section>
 
-      <!-- نموذج تواصل -->
-      <section id="contact" class="card" aria-labelledby="contactTitle">
-        <h3 id="contactTitle">تواصل معنا</h3>
-        <p class="muted">اترك بياناتك وسنعاود الاتصال بك لترتيب موعد أو استشارة.</p>
-
-        <form id="contactForm" novalidate>
-          <label class="muted">الاسم</label>
-          <input type="text" id="name" placeholder="اسمك" required>
-
-          <label class="muted">الهاتف</label>
-          <input type="tel" id="phone" placeholder="مثال: 0100xxxxxxx" required>
-
-          <label class="muted">الرسالة (اختياري)</label>
-          <textarea id="message" rows="4" placeholder="رسالتك أو سبب التواصل"></textarea>
-
-          <button type="submit" class="btn btn-primary">إرسال</button>
-          <div id="formMsg" class="muted" style="margin-top:10px"></div>
-        </form>
+      <section id="developers" class="card">
+        <h3>فريق البرمجة</h3>
+        <p class="muted">هؤلاء هم المبرمجون الذين عملوا على تطوير الموقع وصيانته:</p>
+        <ul style="padding-left:18px; margin-top:8px">
+          <li>ابراهيم أيمن</li>
+            <p>للتواصل مع المبرمج عبر:</p>
+            <ul>
+                <li>واتساب : 01060998583</li>
+                <li>الايميل: ebrahemayman196@gmail.com</li>
+            </ul>
+        </ul>
       </section>
 
+      <section id="contact" class="card">
+        <h3>تواصل معنا</h3>
+        <p class="muted">للحجز أو الاستفسار، الرجاء الاتصال على الرقم التالي:</p>
+        <p style="font-weight:700; font-size:16px; margin-top:8px">📞 01008875037</p>
+      </section>
     </section>
   </main>
 
-  <!-- Floating WhatsApp -->
-  <div class="floating-whatsapp" aria-hidden="false">
-    <a href="https://wa.me/201008875037" target="_blank" title="تواصل عبر واتساب">💬</a>
+  <div class="floating-whatsapp">
+    <a href="https://wa.me/201008875037" target="_blank">💬</a>
   </div>
 
-  <!-- to top -->
-  <a href="#home" class="to-top" title="لأعلى">▲</a>
+  <a href="#home" class="to-top">▲</a>
 
   <footer>
     <div>برمجة إبراهيم أيمن © جميع الحقوق محفوظة للدكتورة آية 2025</div>
   </footer>
 
-  <!-- ====== JavaScript ====== -->
   <script>
-    // تمكين التمرير السلس للروابط الداخلية
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
       anchor.addEventListener('click', function(e){
         var target = document.querySelector(this.getAttribute('href'));
@@ -453,8 +383,6 @@
         }
       });
     });
-
-    // تفعيل تمييز الرابط النشط حسب السطر الحالي
     const navLinks = document.querySelectorAll('.nav-link');
     function setActiveNav(){
       let fromTop = window.scrollY + 100;
@@ -470,54 +398,6 @@
     }
     window.addEventListener('scroll', setActiveNav);
     setActiveNav();
-
-    // FORM: تحقق بسيط واظهار رسالة نجاح (بدون باكند)
-    const contactForm = document.getElementById('contactForm');
-    const formMsg = document.getElementById('formMsg');
-
-    contactForm.addEventListener('submit', function(e){
-      e.preventDefault();
-      formMsg.style.color = 'var(--muted)';
-      formMsg.textContent = '';
-
-      const name = document.getElementById('name').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-
-      if(name.length < 2){
-        formMsg.style.color = 'crimson';
-        formMsg.textContent = 'اكتب اسم صحيح (حرفين على الأقل).';
-        return;
-      }
-
-      // تحقق بسيط لرقم الهاتف (أرقام فقط وطول مناسب)
-      const digits = phone.replace(/\\D/g,'');
-      if(digits.length < 9){
-        formMsg.style.color = 'crimson';
-        formMsg.textContent = 'أدخل رقم هاتف صحيح (مثال: 0100xxxxxxx).';
-        return;
-      }
-
-      // لو عايز ترسل للواتساب مباشرة: ممكن تفتح رابط مع رسالة جاهزة
-      // هنا نعرض رسالة نجاح بسيطة
-      formMsg.style.color = 'green';
-      formMsg.textContent = 'شكرًا! تم استلام طلبك، سنتواصل معك قريبًا.';
-      contactForm.reset();
-
-      // لو حابب: افتح نافذة واتساب مع رسالة تلقائية (معلق - فعّل السطرين أسفله لو حابب)
-      /*
-      const waNumber = '201008875037';
-      const waText = encodeURIComponent('مرحبًا، اسمي ' + name + ' ورقمي ' + phone + '، أود حجز جلسة.');
-      window.open('https://wa.me/' + waNumber + '?text=' + waText, '_blank');
-      */
-    });
-
-    // زر الحجز السريع يمرر إلى نموذج التواصل
-    document.getElementById('bookBtn').addEventListener('click', function(){
-      const contact = document.getElementById('contact');
-      if(contact) contact.scrollIntoView({behavior:'smooth', block:'start'});
-    });
-
-    // تحسين سلوك رابط العودة للأعلى (زر to-top يظهر/يختفي بحسب السحب)
     const toTop = document.querySelector('.to-top');
     window.addEventListener('scroll', function(){
       if(window.scrollY > 400){
@@ -526,16 +406,15 @@
         toTop.style.display = 'none';
       }
     });
-    // بداية: إخفاءه
     toTop.style.display = 'none';
-
-    // Optional: support keyboard accessibility for to-top
     toTop.addEventListener('click', function(e){
       e.preventDefault();
       window.scrollTo({top:0, behavior:'smooth'});
     });
-
-    // End of script
+    document.getElementById('bookBtn').addEventListener('click', function(){
+      const contact = document.getElementById('contact');
+      if(contact) contact.scrollIntoView({behavior:'smooth', block:'start'});
+    });
   </script>
 </body>
 </html>
